@@ -1,0 +1,33 @@
+{
+  "expo": {
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "backgroundColor": "#ffffff",
+      "resizeMode": "contain",
+      "image": "./assets/splash.png"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "packagerOpts": {
+      "port": 58157
+    },
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "sdkVersion": "31.0.0",
+    "privacy": "public",
+    "slug": "api_mobile_test",
+    "description": "This project is really great.",
+    "name": "api_mobile_test"
+  }
+}
