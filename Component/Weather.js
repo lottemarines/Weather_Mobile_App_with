@@ -3,61 +3,23 @@ import { View, StyleSheet, Text, Image } from 'react-native';
 
 import DayComonent from '../Modules/DayComponent.js';
 
-//JSON配列に2日分の天気のデータを格納している
-// const dayWeather = [
-//     {
-//       dateLabel: "今日",
-//       telop: "曇り",
-//       date: "2018-12-04",
-//       temperature: {
-//         min: null,
-//         max: {
-//           celsius: "21",
-//           fahrenheit: "69.8"
-//         },
-//       },
-//       image: {
-//         width: 50,
-//         url: "http://weather.livedoor.com/img/icon/8.gif",
-//         title: "曇り",
-//         height: 31
-//       }
-//     },
-//     {
-//       dateLabel: "明日",
-//       telop: "曇り",
-//       date: "2018-12-05",
-//       temperature: {
-//         min: null,
-//         max: {
-//           celsius: "15",
-//           fahrenheit: "59.0"
-//         },
-//       },
-//       image: {
-//         width: 50,
-//         url: "http://weather.livedoor.com/img/icon/8.gif",
-//         title: "曇り",
-//         height: 31
-//       }
-//     },
-// ]
-
-
 export default class Weather extends Component<Props> {
   render() {
     const information = this.props.information
-    const title = this.props.information.title
-    const weatherInformation = this.props.information.forecasts
+    const name = this.props.information.name
+	const tempInformation = this.props.information.main
+    const weatherInformation = this.props.information.weather
 
     function InformationExit() {
       if (information.length != 0) {
         return(
           <View style={styles.weather}>
-            <Text style={styles.weatherTitle}>{title}</Text>
+            <Text style={styles.weatherTitle}>今日の{name}の天気</Text>
             <View style={styles.dayWeather}>
-              <DayComonent weather={weatherInformation[0]} />
-              <DayComonent weather={weatherInformation[1]} />
+              <DayComonent
+				  weather={weatherInformation[0]}
+				  temp={tempInformation}
+				  />
             </View>
           </View>
         )
