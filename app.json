@@ -1,33 +1,33 @@
 {
   "expo": {
-    "orientation": "portrait",
-    "version": "1.0.0",
+    "ios": {
+      "supportsTablet": true
+    },
+    "packagerOpts": {
+      "port": 57102
+    },
+    "slug": "api_mobile_test",
+    "privacy": "public",
+    "sdkVersion": "31.0.0",
     "platforms": [
       "ios",
       "android"
     ],
-    "sdkVersion": "31.0.0",
-    "privacy": "public",
-    "slug": "api_mobile_test",
-    "packagerOpts": {
-      "port": 51518
-    },
-    "ios": {
-      "supportsTablet": true
-    },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
-    "updates": {
-      "fallbackToCacheTimeout": 0
-    },
+    "description": "This project is really great.",
+    "name": "api_mobile_test",
+    "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
-    "icon": "./assets/icon.png",
-    "name": "api_mobile_test",
-    "description": "This project is really great."
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "orientation": "portrait",
+    "version": "1.0.0"
   }
 }
