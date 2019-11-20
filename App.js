@@ -10,7 +10,7 @@ type Props = {};
 import axios from 'axios';
 //BaseURL読み込み
 const baseRequest = axios.create({
-  baseURL: 'http://weather.livedoor.com/forecast/webservice/json/',
+  baseURL: 'http://api.openweathermap.org/data/2.5/',
   responseType: 'json',
 })
 
@@ -22,7 +22,7 @@ export default class App extends Component<Props> {
 
   onEndEditing(text) {
     baseRequest
-      .get('v1', {params: {city: text} })
+      .get('weather', {params: {zip: text + ',jp', units:'metric', lang:'ja', APPID: 'ecda8e00479256b2bf3f2c304ee93c25'} })
       .then( res => {
         this.setState({information: res.data})
 		console.log(res.data);
@@ -39,7 +39,7 @@ export default class App extends Component<Props> {
         <Header />
         <View style={styles.inputContainer}>
           <TextInput
-            placeholder="検索"
+            placeholder="郵便番号を入力(例 134-0081）"
             style={styles.textInput}
             onEndEditing={ e => this.onEndEditing(e.nativeEvent.text)}
           />
